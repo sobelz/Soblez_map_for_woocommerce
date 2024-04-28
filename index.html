@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/fav.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soblez map for woocommerce</title>
+  <meta name="description" content="This is a small program to create the ability to select a location and automatically convert it to the user's exact address, which can be used easily in any way and in any larger program.">
+</head>
+
+<body>
+  <pre id="data-map" style="display: none;">
+    {
+      "country": "#billing_country",
+      "state": "#billing_state",
+      "city": "#billing_city",
+      "address_1": "#billing_address_1",
+      "address_2": "#billing_address_2",
+      "latitude": "#billing_latitude",
+      "longitude": "#billing_longitude",
+      "display_checkout": "1"
+  }
+  </pre>
+  <div id="MapWrapper"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
+
+<!-- 
+      Json items for enter in pre tag by "data-map" id : 
+
+      "my_location_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/01\/sobelz_map_selector_my_location-13.png",
+      "rotate_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/02\/sobelz_map_selector_rotate.png",
+      "search_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/01\/sobelz_map_selector_search.png",
+      "selector_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/01\/sobelz_map_selector_selector.svg",
+      "zoom_in_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/02\/sobelz_map_selector_zoom_in.png",
+      "zoom_out_icon": "https:\/\/test.sobelz.ir\/wp-content\/uploads\/2024\/02\/sobelz_map_selector_zoom_out.png",
+      "country": "#billing_country",
+      "state": "#billing_state",
+      "city": "#billing_city",
+      "address_1": "#billing_address_1",
+      "address_2": "#billing_address_2",
+      "latitude": "#billing_latitude",
+      "longitude": "#billing_longitude",
+      "search_placeholder": "\u062c\u0633\u062a \u062c\u0648...",
+      "submit_button_text": "\u062a\u0627\u06cc\u06cc\u062f | \u062a\u0628\u062f\u06cc\u0644 \u0628\u0647 \u0622\u062f\u0631\u0633",
+      "map_color": "#02031d",
+      "submit_button_color": "#00e099",
+      "display_checkout": "1"
+ -->
