@@ -2,7 +2,7 @@
   "name": "soblez_map_for_woocommerce",
   "description":"This is a small program to create the ability to select a location and automatically convert it to the user's exact address, which can be used easily in any way and in any larger program.",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
