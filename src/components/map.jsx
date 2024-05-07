@@ -293,8 +293,8 @@ const MapComponent = ({ onCange = () => { }, onSubmit = () => { }, isEnable = tr
   return (
     <div className={`p-4 w-full relative rounded-lg ${!enable ? "opacity-80 pointer-events-none [&_*]:!pointer-events-none" : ""}`}>
       <div className="w-full shadow p-2 relative rounded-md mb-1 flex">
-        <input onChange={handleSearch} value={searchValue} type="text" placeholder={mapData.search_placeholder || "جست جو..."} className="flex-1 bg-transparent" />
-        <button onClick={submitSearch} type="button" style={mapData.map_color ? { backgroundColor: mapData.map_color } : {}} className="bg-darkBlue p-1 rounded ">
+        <input onChange={handleSearch} value={searchValue} type="text" placeholder={mapData.search_placeholder || "جست جو..."} className="flex-1 bg-transparent !border-none !p-0 !h-auto" />
+        <button onClick={submitSearch} type="button" style={mapData.map_color ? { backgroundColor: mapData.map_color } : {}} className="bg-darkBlue !p-1 w-7 h-7 flex rounded !min-h-0">
           {mapData.my_location_icon ?
             <img src={mapData.search_icon} /> :
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -315,11 +315,11 @@ const MapComponent = ({ onCange = () => { }, onSubmit = () => { }, isEnable = tr
           </ul>
         </div>
       </div>
-      <div ref={mapElRef} id="map" className="w-full relative [&_.ol-control]:w-max [&_.ol-control_button]:w-6 [&_.ol-control_button]:m-1 [&_.ol-control_button]:h-6 [&_.ol-control_button]:rounded-md [&_.ol-control_button]:text-white [&_.ol-control_button]:bg-darkBlue/50 rounded-xl overflow-hidden h-[35vh] cursor-pointer">
+      <div ref={mapElRef} id="map" className="w-full relative [&_.ol-control_button]:min-h-fit [&_.ol-control]:flex [&_.ol-control_button]:flex [&_.ol-control_button]:items-center [&_.ol-control_button]:justify-center [&_.ol-control_button]:!p-1 [&_.ol-control]:w-max [&_.ol-control_button]:!w-8 [&_.ol-control_button]:m-1 [&_.ol-control_button]:!h-8 [&_.ol-control_button]:rounded-md [&_.ol-control_button]:text-white [&_.ol-control_button]:bg-darkBlue/50 rounded-xl overflow-hidden h-[35vh] cursor-pointer">
         {loading ? <div className="absolute w-full h-full z-40 top-0 right-0 flex items-center justify-center bg-white/80 rounded-xl">
           <span className="loader"></span>
         </div> : null}
-        <button onClick={getUserLocatio} style={mapData.map_color ? { backgroundColor: mapData.map_color + "bb" } : {}} type="button" className="absolute flex items-center justify-center cursor-pointer w-9 h-9 left-2 bottom-2 z-20 p-1 rounded-md bg-darkBlue/80">
+        <button onClick={getUserLocatio} style={mapData.map_color ? { backgroundColor: mapData.map_color + "bb" } : {}} type="button" className="absolute flex items-center justify-center cursor-pointer !w-9 !h-9 left-2 bottom-2 z-20 !p-1 rounded-md bg-darkBlue/80 min-h-0">
           {mapData.my_location_icon ?
             <img src={mapData.my_location_icon} />
             :
@@ -329,7 +329,7 @@ const MapComponent = ({ onCange = () => { }, onSubmit = () => { }, isEnable = tr
         </button>
       </div>
       <div className="my-5">
-        <button disabled={LonLat.length !== 2} onClick={getAddressFromLonLat} style={mapData.submit_button_color ? { backgroundColor: mapData.submit_button_color } : {}} className={`p-2 bg-green text-white rounded-md cursor-pointer ${LonLat.length !== 2 ? "cursor-auto opacity-60" : ""}`} type="button">{mapData.submit_button_text || "تایید | تبدیل به آدرس"}</button>
+        <button disabled={LonLat.length !== 2} onClick={getAddressFromLonLat} style={mapData.submit_button_color ? { backgroundColor: mapData.submit_button_color } : {}} className={`p-2 bg-green hover:text-slate-300 text-white rounded-md !cursor-pointer ${LonLat.length !== 2 ? "cursor-auto opacity-60" : ""}`} type="button">{mapData.submit_button_text || "تایید | تبدیل به آدرس"}</button>
       </div>
     </div>
   )
